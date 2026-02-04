@@ -4,10 +4,11 @@ import os
 st.title("MNIST User Explanations Explorer")
 
 # Create sidebar for user inputs
-sample_idx = st.sidebar.slider("Select sample index (Sample Index)", 0, 49, 0)
-group_id = st.sidebar.radio("Select group (Group)", [1, 2])
+sample_idx = st.sidebar.slider("Select sample index", 0, 49, 0)
+group_id = st.sidebar.radio("Select group", [1, 2])
 
-st.header(f"Sample {sample_idx} - Group {group_id}")
+group_name = "Normal Edit" if group_id == 1 else "Min Edit"
+st.header(f"Sample {sample_idx} - Group {group_name}")
 
 # Show the corresponding image
 img_path = f"plots/mnist_group{group_id}_sample{sample_idx}.png"
