@@ -11,7 +11,7 @@ with tab_mnist:
     col1, col2 = st.columns([1, 3])
     with col1:
         st.subheader("Controls")
-        m_sample_idx = st.number_input("Sample Index", 0, 49, 0, key="mnist_idx")
+        m_sample_idx = st.slider("Sample Index", 0, 49, 0, key="mnist_slider")
         m_group_id = st.radio("Group", [1, 2], key="mnist_group")
     
     with col2:
@@ -26,12 +26,12 @@ with tab_mnist:
 # --- QuickDraw ---
 with tab_quickdraw:
     col1_qd, col2_qd = st.columns([1, 3])
-    with col1:
-            st.subheader("Controls")
-            qd_sample_idx = st.slider("Sample ID", 0, 29, 0, key="qd_slider")
-            st.info(f"Showing QuickDraw Sample {qd_sample_idx}")
+    with col1_qd:
+        st.subheader("Controls")
+        qd_sample_idx = st.slider("Sample ID", 0, 29, 0, key="qd_slider")
+        st.info(f"Showing QuickDraw Sample {qd_sample_idx}")
 
-    with col2:
+    with col2_qd:
         qd_path = f"plots/quickdraw/quickdraw_sample{qd_sample_idx}.png"
             
         if os.path.exists(qd_path):
