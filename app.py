@@ -11,7 +11,7 @@ group_name = "Normal Edit" if group_id == 1 else "Min Edit"
 st.header(f"Sample {sample_idx} - Group {group_name}")
 
 # Show the corresponding image
-img_path = f"plots/mnist_group{group_id}_sample{sample_idx}.png"
+img_path = f"plots/mnist/mnist_group{group_id}_sample{sample_idx}.png"
 if os.path.exists(img_path):
     st.image(img_path, use_column_width=True)
 else:
