@@ -29,10 +29,11 @@ with tab_quickdraw:
     with col1_qd:
         st.subheader("Controls")
         qd_sample_idx = st.slider("Sample ID", 0, 29, 0, key="qd_slider")
-        st.info(f"Showing QuickDraw Sample {qd_sample_idx}")
 
     with col2_qd:
         qd_path = f"plots/quickdraw/quickdraw_sample{qd_sample_idx}.png"
+        st.write(f"**Showing QuickDraw Sample {qd_sample_idx}**")
+
             
         if os.path.exists(qd_path):
             st.image(qd_path, use_container_width=True)
