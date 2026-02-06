@@ -17,7 +17,7 @@ with tab_mnist:
     with col2:
         m_group_name = "Normal Edit" if m_group_id == 1 else "Min Edit"
         st.write(f"**Showing MNIST Sample {m_sample_idx} ({m_group_name})**")
-        mnist_path = f"plots/mnist/mnist_group{m_group_id}_sample{m_sample_idx}.png"
+        mnist_path = f"plots/mnist_ssim/mnist_group{m_group_id}_sample{m_sample_idx}.png"
         if os.path.exists(mnist_path):
             st.image(mnist_path, use_container_width=True)
         else:
