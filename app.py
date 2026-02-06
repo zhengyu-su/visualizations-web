@@ -31,7 +31,7 @@ with tab_quickdraw:
         qd_sample_idx = st.slider("Sample ID", 0, 29, 0, key="qd_slider")
 
     with col2_qd:
-        qd_path = f"plots/quickdraw/quickdraw_sample{qd_sample_idx}.png"
+        qd_path = f"plots/quickdraw_ssim/quickdraw_sample{qd_sample_idx}.png"
         st.write(f"**Showing QuickDraw Sample {qd_sample_idx}**")
 
             
