@@ -52,25 +52,7 @@ with tab_mnist:
 
 # --- QuickDraw ---
 with tab_quickdraw:
-    '''
-    q_model_tab1, q_model_tab2 = st.tabs(["Original Model", "New Torch Model"])
     
-    with q_model_tab1:
-        # 复制你之前的 QuickDraw 逻辑，路径设为 plots/...
-        idx_q = st.slider("Sample ID", 0, 29, 0, key="q_orig_slider")
-        path_q = f"plots/quickdraw_ssim/quickdraw_sample{idx_q}.png"
-        if os.path.exists(path_q):
-            st.image(path_q, use_container_width=True)
-            
-    with q_model_tab2:
-        # 路径设为 plots_torch/...
-        idx_qt = st.slider("Sample ID", 0, 29, 0, key="q_torch_slider")
-        path_qt = f"plots_torch/quickdraw_ssim/quickdraw_sample{idx_qt}.png"
-        if os.path.exists(path_qt):
-            st.image(path_qt, use_container_width=True)
-        else:
-            st.error("Torch results for QuickDraw not found.")
-        '''
     col1_qd, col2_qd = st.columns([1, 3])
     with col1_qd:
         st.subheader("Controls")
