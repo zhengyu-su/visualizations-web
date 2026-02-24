@@ -40,7 +40,7 @@ with tab_mnist:
         with col1:
             st.subheader("Controls")
             idx_t = st.slider("Sample Index", 0, 49, 0, key="m_torch_slider")
-            grp_t = st.radio("Group", [1, 2], key="mnist_group")
+            grp_t = st.radio("Group", [1, 2], key="mnist_group_t")
         with col2:
             m_group_name = "Normal Edit" if grp_t == 1 else "Min Edit"
             st.write(f"**Torch Model Result Sample {idx_t} ({m_group_name})**")
