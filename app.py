@@ -44,7 +44,7 @@ with tab_mnist:
         with col2:
             m_group_name = "Normal Edit" if grp_t == 1 else "Min Edit"
             st.write(f"**Torch Model Result Sample {idx_t} ({m_group_name})**")
-            path_t = f"plots_torch/mnist_ssim/mnist_group{grp_t}_sample{idx_t}.png"
+            path_t = f"plots/torch/mnist/mnist_group{grp_t}_sample{idx_t}.png"
             if os.path.exists(path_t):
                 st.image(path_t, use_container_width=True)
             else:
