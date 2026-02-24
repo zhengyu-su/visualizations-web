@@ -44,7 +44,7 @@ with tab_mnist:
         with col2:
             m_group_name = "Normal Edit" if grp_t == 1 else "Min Edit"
             st.write(f"**Torch Model Result Sample {idx_t} ({m_group_name})**")
-            path_t = f"plots/torch/mnist/mnist_group{grp_t}_sample{idx_t}.png"
+            path_t = f"plots/mnist/torch_without_augmentation/mnist_group{grp_t}_sample{idx_t}.png"
             if os.path.exists(path_t):
                 st.image(path_t, use_container_width=True)
             else:
@@ -52,7 +52,7 @@ with tab_mnist:
 
 # --- QuickDraw ---
 with tab_quickdraw:
-    
+
     col1_qd, col2_qd = st.columns([1, 3])
     with col1_qd:
         st.subheader("Controls")
