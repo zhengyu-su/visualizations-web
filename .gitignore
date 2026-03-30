@@ -1,3 +1,5 @@
+plots/
+
 # System Files
 .DS_Store
 .AppleDouble
@@ -20,3 +22,5 @@ Icon
 *.swp
 *.sublime-project
 *.sublime-workspace
+
+group_wise_acc.png
